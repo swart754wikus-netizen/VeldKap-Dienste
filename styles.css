@@ -192,6 +192,25 @@ a { color: inherit; text-decoration: none; }
 
 .product-card p { margin-bottom: 0; }
 
+.service-note {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: var(--green-900);
+  border-radius: var(--radius);
+  color: #fff;
+}
+
+.service-note-icon { font-size: 1.8rem; flex-shrink: 0; }
+.service-note p { margin: 0; color: rgba(255, 255, 255, 0.9); }
+.service-note strong { color: #fff; }
+
+@media (max-width: 500px) {
+  .service-note { flex-direction: column; text-align: center; }
+}
+
 /* Price table (used inside the category modal) */
 .price-table-wrap {
   overflow-x: auto;

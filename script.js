@@ -1,12 +1,8 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const catalog = {
-  mowers: {
-    title: "Lawn Mowers",
-    items: [],
-  },
   brushcutters: {
-    title: "Brush Cutters & Trimmers",
+    title: "Brush Cutters",
     items: [
       { brand: "Bush Hog", model: "143R 41.5cc", price: "R1,599" },
       { brand: "Stiletto", model: "PRO143R 41cc", price: "R1,999" },
@@ -17,20 +13,32 @@ const catalog = {
       { brand: "Husky", model: "143R HD Elite 41cc", price: "R2,349" },
     ],
   },
+  trimmers: {
+    title: "Trimmers",
+    items: [],
+  },
   chainsaws: {
     title: "Chainsaws",
     items: [],
   },
-  gardentools: {
-    title: "Garden Tools",
+  blowers: {
+    title: "Blowers",
+    items: [],
+  },
+  hedgetrimmers: {
+    title: "Hedge Trimmers",
+    items: [],
+  },
+  mowers: {
+    title: "Lawn Mowers",
+    items: [],
+  },
+  earthaugers: {
+    title: "Earth Augers",
     items: [],
   },
   spareparts: {
     title: "Spare Parts & Accessories",
-    items: [],
-  },
-  repairs: {
-    title: "Repairs & Servicing",
     items: [],
   },
 };
