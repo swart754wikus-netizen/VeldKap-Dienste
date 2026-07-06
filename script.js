@@ -8,13 +8,59 @@ const catalog = {
     tagline: "Petrol brush cutters for clearing overgrowth and tough vegetation.",
     photo: "images/hero-brushcutter.jpg",
     items: [
-      { brand: "Bush Hog", model: "143R 41.5cc", price: "R1,599" },
-      { brand: "Stiletto", model: "PRO143R 41cc", price: "R1,999" },
-      { brand: "Stiletto", model: "143R HD Turbo 41.5cc", price: "R1,999" },
-      { brand: "Tanaka", model: "143R HD 41cc", price: "R2,199" },
-      { brand: "Tanaka", model: "143R HD Turbo 41.5cc", price: "R2,199" },
-      { brand: "Husky", model: "143R HD Turbo 41.5cc", price: "R2,199" },
-      { brand: "Husky", model: "143R HD Elite 41cc", price: "R2,349" },
+      {
+        name: "Bush Hog 143R",
+        price: "R1,599",
+        description: [
+          "The Bush Hog 143R is a dependable entry-level brushcutter designed for homeowners, smallholdings and light farming applications. It offers excellent value for money while delivering the power needed to cut grass, weeds and light brush. Built with durability in mind, it's an ideal choice for occasional to regular use without stretching your budget.",
+        ],
+        idealFor: ["Homeowners", "Small farms", "Garden maintenance", "Light commercial work"],
+        features: ["41.5cc petrol engine", "Easy starting", "Heavy-duty gearbox", "Comfortable handlebar design", "Excellent value"],
+      },
+      {
+        name: "Stiletto PRO143R",
+        badge: "⭐",
+        price: "R1,999",
+        description: [
+          "The Stiletto PRO143R is a powerful, heavy-duty brushcutter built for users who need reliable performance every day. Offering more durability and power than entry-level models, it's perfect for farms, landscapers and contractors looking for outstanding value.",
+        ],
+        idealFor: ["Farms", "Landscapers", "Contractors", "Large properties"],
+        features: ["Powerful 41cc engine", "Heavy-duty shaft", "Commercial gearbox", "Comfortable harness", "Built for regular use"],
+      },
+      {
+        name: "Tanaka 143R HD",
+        badge: "🔥",
+        badgeLabel: "⭐ Our Best Seller",
+        price: "R2,199",
+        description: [
+          "The Tanaka 143R HD is our most popular brushcutter, trusted by farmers, contractors and professionals for its outstanding reliability and performance. Designed for demanding conditions, it combines excellent cutting power with a durable heavy-duty shaft and gearbox, making it the perfect machine for everyday commercial use.",
+          "Whether you're clearing thick grass, weeds or maintaining large properties, the Tanaka 143R HD delivers the performance you can depend on.",
+        ],
+        idealFor: ["Professional contractors", "Farmers", "Municipal maintenance", "Landscaping businesses"],
+        features: ["Commercial-grade 41cc engine", "Heavy-duty square drive shaft", "Professional gearbox", "Comfortable harness", "Built for daily use", "Excellent power-to-weight ratio"],
+      },
+      {
+        name: "Tanaka 143R HD Turbo",
+        badge: "👑",
+        price: "R2,199",
+        description: [
+          "The Tanaka 143R HD Turbo is engineered for users who require maximum cutting performance in demanding environments. Featuring a high-performance engine and extra heavy-duty construction, it's ideal for clearing thick grass, dense weeds and challenging terrain with ease.",
+          "Designed for professionals who rely on their equipment every day.",
+        ],
+        idealFor: ["Commercial contractors", "Farmers", "Heavy vegetation", "Daily professional use"],
+        features: ["High-performance engine", "Heavy-duty drive shaft", "Professional gearbox", "Superior cutting power", "Built for tough conditions"],
+      },
+      {
+        name: "Husky 143R HD Elite",
+        badge: "🏆",
+        price: "R2,349",
+        description: [
+          "The Husky 143R HD Elite is the premium choice in the 143R range. Designed for professionals who demand exceptional durability, comfort and performance, it delivers reliable power throughout long working days.",
+          "With premium components and robust construction, it's built to handle the toughest jobs while providing a comfortable operating experience.",
+        ],
+        idealFor: ["Professional contractors", "Municipalities", "Commercial landscaping", "Intensive daily use"],
+        features: ["Premium commercial engine", "Heavy-duty gearbox", "Professional harness", "Comfortable operation", "Long service life", "Built for demanding applications"],
+      },
     ],
   },
   trimmers: {
@@ -104,12 +150,29 @@ if (rowsEl) {
   function renderRows(items) {
     rowsEl.innerHTML = items
       .map(
-        (item) =>
-          `<tr><td>${item.brand}</td><td>${item.model}</td><td class="price-col">${item.price}</td></tr>`
+        (item) => `
+        <article class="product-detail-card">
+          <div class="product-detail-header">
+            <h3>${item.badge ? item.badge + " " : ""}${item.name}</h3>
+            <span class="product-detail-price">${item.price}</span>
+          </div>
+          ${item.badgeLabel ? `<span class="product-detail-badge">${item.badgeLabel}</span>` : ""}
+          ${item.description.map((p) => `<p class="product-detail-desc">${p}</p>`).join("")}
+          <div class="product-detail-lists">
+            <div>
+              <h4>Ideal for</h4>
+              <ul>${item.idealFor.map((i) => `<li>${i}</li>`).join("")}</ul>
+            </div>
+            <div>
+              <h4>Key Features</h4>
+              <ul>${item.features.map((f) => `<li>${f}</li>`).join("")}</ul>
+            </div>
+          </div>
+        </article>`
       )
       .join("");
     emptyEl.hidden = items.length > 0;
-    rowsEl.closest(".price-table-wrap").hidden = items.length === 0;
+    rowsEl.hidden = items.length === 0;
   }
 
   renderRows(activeItems);
@@ -119,8 +182,8 @@ if (rowsEl) {
     const filtered = q
       ? activeItems.filter(
           (item) =>
-            item.brand.toLowerCase().includes(q) ||
-            item.model.toLowerCase().includes(q)
+            item.name.toLowerCase().includes(q) ||
+            item.description.some((p) => p.toLowerCase().includes(q))
         )
       : activeItems;
     renderRows(filtered);
