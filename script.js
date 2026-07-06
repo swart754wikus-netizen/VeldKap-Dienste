@@ -9,7 +9,9 @@ const catalog = {
     photo: "images/hero-brushcutter.jpg",
     items: [
       {
-        name: "Bush Hog 143R",
+        slug: "bush-hog-143r",
+        brand: "Bush Hog",
+        model: "143R",
         price: "R1,599",
         description: [
           "The Bush Hog 143R is a dependable entry-level brushcutter designed for homeowners, smallholdings and light farming applications. It offers excellent value for money while delivering the power needed to cut grass, weeds and light brush. Built with durability in mind, it's an ideal choice for occasional to regular use without stretching your budget.",
@@ -18,7 +20,9 @@ const catalog = {
         features: ["41.5cc petrol engine", "Easy starting", "Heavy-duty gearbox", "Comfortable handlebar design", "Excellent value"],
       },
       {
-        name: "Stiletto PRO143R",
+        slug: "stiletto-pro143r",
+        brand: "Stiletto",
+        model: "PRO143R",
         badge: "⭐",
         price: "R1,999",
         description: [
@@ -28,7 +32,9 @@ const catalog = {
         features: ["Powerful 41cc engine", "Heavy-duty shaft", "Commercial gearbox", "Comfortable harness", "Built for regular use"],
       },
       {
-        name: "Tanaka 143R HD",
+        slug: "tanaka-143r-hd",
+        brand: "Tanaka",
+        model: "143R HD",
         badge: "🔥",
         badgeLabel: "⭐ Our Best Seller",
         price: "R2,199",
@@ -40,7 +46,9 @@ const catalog = {
         features: ["Commercial-grade 41cc engine", "Heavy-duty square drive shaft", "Professional gearbox", "Comfortable harness", "Built for daily use", "Excellent power-to-weight ratio"],
       },
       {
-        name: "Tanaka 143R HD Turbo",
+        slug: "tanaka-143r-hd-turbo",
+        brand: "Tanaka",
+        model: "143R HD Turbo",
         badge: "👑",
         price: "R2,199",
         description: [
@@ -51,7 +59,9 @@ const catalog = {
         features: ["High-performance engine", "Heavy-duty drive shaft", "Professional gearbox", "Superior cutting power", "Built for tough conditions"],
       },
       {
-        name: "Husky 143R HD Elite",
+        slug: "husky-143r-hd-elite",
+        brand: "Husky",
+        model: "143R HD Elite",
         badge: "🏆",
         price: "R2,349",
         description: [
@@ -107,29 +117,18 @@ const catalog = {
   },
 };
 
-const rowsEl = document.getElementById("catalog-rows");
+const heroEl = document.getElementById("category-hero");
+const titleEl = document.getElementById("catalog-title");
+const taglineEl = document.getElementById("catalog-tagline");
+const iconEl = document.getElementById("category-hero-icon");
+const photoEl = document.getElementById("category-hero-photo");
+const pageTitleEl = document.getElementById("page-title");
 
-if (rowsEl) {
-  const heroEl = document.getElementById("category-hero");
-  const titleEl = document.getElementById("catalog-title");
-  const taglineEl = document.getElementById("catalog-tagline");
-  const iconEl = document.getElementById("category-hero-icon");
-  const photoEl = document.getElementById("category-hero-photo");
-  const pageTitleEl = document.getElementById("page-title");
-  const searchEl = document.getElementById("catalog-search");
-  const emptyEl = document.getElementById("catalog-empty");
-  const sidebarLinks = document.querySelectorAll(".sidebar-link");
-
-  const params = new URLSearchParams(window.location.search);
-  const requestedCategory = params.get("cat");
-  const categoryKey = catalog[requestedCategory] ? requestedCategory : "brushcutters";
-  const category = catalog[categoryKey];
-  let activeItems = category.items;
-
-  titleEl.textContent = category.title;
-  taglineEl.textContent = category.tagline;
+function applyHero(category, titleText, taglineText) {
+  titleEl.textContent = titleText;
+  taglineEl.textContent = taglineText;
   iconEl.textContent = category.icon;
-  if (pageTitleEl) pageTitleEl.textContent = `${category.title} | Veldkap Dienste`;
+  if (pageTitleEl) pageTitleEl.textContent = `${titleText} | Veldkap Dienste`;
 
   if (category.photo) {
     heroEl.classList.add("has-photo");
@@ -138,10 +137,27 @@ if (rowsEl) {
   } else if (category.productImage) {
     heroEl.classList.add("has-product");
     photoEl.src = category.productImage;
-    photoEl.alt = category.title;
+    photoEl.alt = titleText;
     photoEl.hidden = false;
     iconEl.hidden = true;
   }
+}
+
+const params = new URLSearchParams(window.location.search);
+const requestedCategory = params.get("cat");
+const categoryKey = catalog[requestedCategory] ? requestedCategory : "brushcutters";
+const category = catalog[categoryKey];
+
+const rowsEl = document.getElementById("catalog-rows");
+const productNameEl = document.getElementById("product-name");
+
+if (rowsEl) {
+  const searchEl = document.getElementById("catalog-search");
+  const emptyEl = document.getElementById("catalog-empty");
+  const sidebarLinks = document.querySelectorAll(".sidebar-link");
+  let activeItems = category.items;
+
+  applyHero(category, category.title, category.tagline);
 
   sidebarLinks.forEach((link) => {
     link.classList.toggle("is-active", link.dataset.cat === categoryKey);
@@ -151,41 +167,62 @@ if (rowsEl) {
     rowsEl.innerHTML = items
       .map(
         (item) => `
-        <article class="product-detail-card">
-          <div class="product-detail-header">
-            <h3>${item.badge ? item.badge + " " : ""}${item.name}</h3>
-            <span class="product-detail-price">${item.price}</span>
-          </div>
-          ${item.badgeLabel ? `<span class="product-detail-badge">${item.badgeLabel}</span>` : ""}
-          ${item.description.map((p) => `<p class="product-detail-desc">${p}</p>`).join("")}
-          <div class="product-detail-lists">
-            <div>
-              <h4>Ideal for</h4>
-              <ul>${item.idealFor.map((i) => `<li>${i}</li>`).join("")}</ul>
-            </div>
-            <div>
-              <h4>Key Features</h4>
-              <ul>${item.features.map((f) => `<li>${f}</li>`).join("")}</ul>
-            </div>
-          </div>
-        </article>`
+        <tr class="price-row" data-href="product.html?cat=${categoryKey}&item=${item.slug}">
+          <td>${item.brand}</td>
+          <td>${item.badge ? item.badge + " " : ""}${item.model}</td>
+          <td class="price-col">${item.price}</td>
+        </tr>`
       )
       .join("");
     emptyEl.hidden = items.length > 0;
-    rowsEl.hidden = items.length === 0;
+    rowsEl.closest(".price-table-wrap").hidden = items.length === 0;
   }
 
   renderRows(activeItems);
+
+  rowsEl.addEventListener("click", (e) => {
+    const row = e.target.closest(".price-row");
+    if (row) window.location.href = row.dataset.href;
+  });
 
   searchEl.addEventListener("input", () => {
     const q = searchEl.value.trim().toLowerCase();
     const filtered = q
       ? activeItems.filter(
           (item) =>
-            item.name.toLowerCase().includes(q) ||
-            item.description.some((p) => p.toLowerCase().includes(q))
+            item.brand.toLowerCase().includes(q) ||
+            item.model.toLowerCase().includes(q)
         )
       : activeItems;
     renderRows(filtered);
   });
+} else if (productNameEl) {
+  const requestedItem = params.get("item");
+  const item = category.items.find((i) => i.slug === requestedItem) || category.items[0];
+
+  const backLink = document.getElementById("back-link");
+  backLink.href = `category.html?cat=${categoryKey}`;
+  backLink.textContent = `← Back to ${category.title}`;
+
+  const displayName = `${item.badge ? item.badge + " " : ""}${item.brand} ${item.model}`;
+  applyHero(category, displayName, category.tagline);
+
+  productNameEl.textContent = displayName;
+  document.getElementById("product-price").textContent = item.price;
+
+  const badgeLabelEl = document.getElementById("product-badge-label");
+  if (item.badgeLabel) {
+    badgeLabelEl.textContent = item.badgeLabel;
+    badgeLabelEl.hidden = false;
+  }
+
+  document.getElementById("product-description").innerHTML = item.description
+    .map((p) => `<p class="product-detail-desc">${p}</p>`)
+    .join("");
+  document.getElementById("product-ideal-for").innerHTML = item.idealFor
+    .map((i) => `<li>${i}</li>`)
+    .join("");
+  document.getElementById("product-features").innerHTML = item.features
+    .map((f) => `<li>${f}</li>`)
+    .join("");
 }
