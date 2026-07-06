@@ -12,6 +12,7 @@ const catalog = {
         slug: "bush-hog-143r",
         brand: "Bush Hog",
         model: "143R",
+        price: "R1,599",
         badge: "💰",
         badgeLabel: "💰 Budget",
         description: [
@@ -24,6 +25,7 @@ const catalog = {
         slug: "tanaka-143r-hd",
         brand: "Tanaka",
         model: "143R HD",
+        price: "R2,199",
         badge: "⚖️",
         badgeLabel: "⚖️ Mid-Range · Best Seller",
         description: [
@@ -37,6 +39,7 @@ const catalog = {
         slug: "husky-143r-hd-elite",
         brand: "Husky",
         model: "143R HD Elite",
+        price: "R2,349",
         badge: "🏆",
         badgeLabel: "🏆 Premium",
         description: [
@@ -53,9 +56,9 @@ const catalog = {
     icon: "🌾",
     tagline: "Line trimmers for clean, precise edges around beds and paths.",
     items: [
-      { slug: "stiletto-tm-1000", brand: "Stiletto", model: "TM-1000 Electric Trimmer", badge: "💰", badgeLabel: "💰 Budget", description: ["1000W electric trimmer for clean, lightweight edge trimming."], idealFor: [], features: [] },
-      { slug: "dunsch-le20056", brand: "Dunsch", model: "LEA LE20056 Telescopic Trimmer", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["550W electric telescopic trimmer with 30cm cutting width, corded."], idealFor: [], features: [] },
-      { slug: "husky-pro30a", brand: "Husky", model: "PRO30A Bent Shaft Trimmer", badge: "🏆", badgeLabel: "🏆 Premium", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
+      { slug: "stiletto-tm-1000", brand: "Stiletto", model: "TM-1000 Electric Trimmer", price: "R713", badge: "💰", badgeLabel: "💰 Budget", description: ["1000W electric trimmer for clean, lightweight edge trimming."], idealFor: [], features: [] },
+      { slug: "dunsch-le20056", brand: "Dunsch", model: "LEA LE20056 Telescopic Trimmer", price: "R742", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["550W electric telescopic trimmer with 30cm cutting width, corded."], idealFor: [], features: [] },
+      { slug: "husky-pro30a", brand: "Husky", model: "PRO30A Bent Shaft Trimmer", price: "R1,518", badge: "🏆", badgeLabel: "🏆 Premium", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
     ],
   },
   chainsaws: {
@@ -63,9 +66,9 @@ const catalog = {
     icon: "🪚",
     tagline: "Reliable chainsaws for pruning, felling and firewood prep.",
     items: [
-      { slug: "dunsch-du565", brand: "Dunsch", model: "DU565", badge: "💰", badgeLabel: "💰 Budget", description: ["54.6cc, 2.3kW two-stroke petrol chainsaw with 50cm cutting length."], idealFor: [], features: [] },
-      { slug: "husky-cs65t", brand: "Husky", model: "CS65T (20\")", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["65.1cc, 3.7kW petrol chainsaw with 20\" bar, built for grounds maintenance, felling and forestry work."], idealFor: [], features: [] },
-      { slug: "tanaka-cs72", brand: "Tanaka", model: "CS72 (22\")", badge: "🏆", badgeLabel: "🏆 Premium", description: ["70.7cc, 3.9kW petrol chainsaw with 22\" bar."], idealFor: [], features: [] },
+      { slug: "dunsch-du565", brand: "Dunsch", model: "DU565", price: "R1,449", badge: "💰", badgeLabel: "💰 Budget", description: ["54.6cc, 2.3kW two-stroke petrol chainsaw with 50cm cutting length."], idealFor: [], features: [] },
+      { slug: "husky-cs65t", brand: "Husky", model: "CS65T (20\")", price: "R4,370", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["65.1cc, 3.7kW petrol chainsaw with 20\" bar, built for grounds maintenance, felling and forestry work."], idealFor: [], features: [] },
+      { slug: "tanaka-cs72", brand: "Tanaka", model: "CS72 (22\")", price: "R5,022", badge: "🏆", badgeLabel: "🏆 Premium", description: ["70.7cc, 3.9kW petrol chainsaw with 22\" bar."], idealFor: [], features: [] },
     ],
   },
   blowers: {
@@ -73,9 +76,9 @@ const catalog = {
     icon: "🍃",
     tagline: "Handheld and backpack blowers for clearing leaves and debris.",
     items: [
-      { slug: "husky-blo300an", brand: "Husky", model: "BLO300AN Handheld Blower", badge: "💰", badgeLabel: "💰 Budget", description: ["26cc, 0.95kW petrol handheld blower."], idealFor: [], features: [] },
-      { slug: "husky-blo950", brand: "Husky", model: "BLO950 Backpack Blower", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["75.6cc, 3.2kW petrol backpack blower."], idealFor: [], features: [] },
-      { slug: "tanaka-blo850", brand: "Tanaka", model: "BLO850 Backpack Blower", badge: "🏆", badgeLabel: "🏆 Premium", description: ["63.3cc, 2.6kW heavy-duty petrol backpack blower."], idealFor: [], features: [] },
+      { slug: "husky-blo300an", brand: "Husky", model: "BLO300AN Handheld Blower", price: "R1,527", badge: "💰", badgeLabel: "💰 Budget", description: ["26cc, 0.95kW petrol handheld blower."], idealFor: [], features: [] },
+      { slug: "husky-blo950", brand: "Husky", model: "BLO950 Backpack Blower", price: "R3,065", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["75.6cc, 3.2kW petrol backpack blower."], idealFor: [], features: [] },
+      { slug: "tanaka-blo850", brand: "Tanaka", model: "BLO850 Backpack Blower", price: "R5,903", badge: "🏆", badgeLabel: "🏆 Premium", description: ["63.3cc, 2.6kW heavy-duty petrol backpack blower."], idealFor: [], features: [] },
     ],
   },
   hedgetrimmers: {
@@ -87,6 +90,7 @@ const catalog = {
         slug: "stiletto-hedge-trimmer",
         brand: "Stiletto",
         model: "Hedge Trimmer",
+        price: "R2,837",
         badge: "💰",
         badgeLabel: "💰 Budget",
         description: [
@@ -99,6 +103,7 @@ const catalog = {
         slug: "husky-glt600",
         brand: "Husky",
         model: "GLT600",
+        price: "R2,952",
         badge: "⚖️",
         badgeLabel: "⚖️ Mid-Range",
         description: [
@@ -111,6 +116,7 @@ const catalog = {
         slug: "husky-hedge-trimmer-25cc",
         brand: "Husky",
         model: "Hedge Trimmer (25cc)",
+        price: "R3,143",
         badge: "🏆",
         badgeLabel: "🏆 Premium",
         description: [
@@ -126,9 +132,9 @@ const catalog = {
     icon: "🚜",
     tagline: "Push, self-propelled and ride-on mowers for gardens of every size.",
     items: [
-      { slug: "husky-m-husexv200", brand: "Husky", model: "19\" Petrol Walk-Behind Mower (196cc)", badge: "💰", badgeLabel: "💰 Budget", description: ["19\" aluminium walk-behind mower with a 196cc, 4kW 4-stroke petrol engine."], idealFor: [], features: [] },
-      { slug: "husky-tractor-42-15", brand: "Husky", model: "42\" Ride-On Tractor Mower (15HP)", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["42\" cutting width ride-on tractor mower with a 15HP petrol engine."], idealFor: [], features: [] },
-      { slug: "husky-mt152ztr", brand: "Husky", model: "60\" Zero-Turn Mower", badge: "🏆", badgeLabel: "🏆 Premium", description: ["60\" cutting width commercial zero-turn mower with a 708cc petrol engine."], idealFor: [], features: [] },
+      { slug: "husky-m-husexv200", brand: "Husky", model: "19\" Petrol Walk-Behind Mower (196cc)", price: "R8,357", badge: "💰", badgeLabel: "💰 Budget", description: ["19\" aluminium walk-behind mower with a 196cc, 4kW 4-stroke petrol engine."], idealFor: [], features: [] },
+      { slug: "husky-tractor-42-15", brand: "Husky", model: "42\" Ride-On Tractor Mower (15HP)", price: "R60,663", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["42\" cutting width ride-on tractor mower with a 15HP petrol engine."], idealFor: [], features: [] },
+      { slug: "husky-mt152ztr", brand: "Husky", model: "60\" Zero-Turn Mower", price: "R136,563", badge: "🏆", badgeLabel: "🏆 Premium", description: ["60\" cutting width commercial zero-turn mower with a 708cc petrol engine."], idealFor: [], features: [] },
     ],
   },
   earthaugers: {
@@ -136,9 +142,9 @@ const catalog = {
     icon: "🕳️",
     tagline: "Petrol earth augers for fast, effortless hole digging.",
     items: [
-      { slug: "husky-aug-ag52-100", brand: "Husky", model: "AG52 Earth Auger (100mm bit)", badge: "💰", badgeLabel: "💰 Budget", description: ["51.7cc petrol earth auger with a 100mm bit."], idealFor: [], features: [] },
-      { slug: "tanaka-aug-ag52-200", brand: "Tanaka", model: "AG52 Earth Auger (200mm bit)", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["51.7cc petrol earth auger with a 200mm bit."], idealFor: [], features: [] },
-      { slug: "tanaka-aug-300", brand: "Tanaka", model: "Earth Auger (300mm bit)", badge: "🏆", badgeLabel: "🏆 Premium", description: ["Heavy-duty 51.7cc petrol earth auger with a 300mm bit."], idealFor: [], features: [] },
+      { slug: "husky-aug-ag52-100", brand: "Husky", model: "AG52 Earth Auger (100mm bit)", price: "R2,837", badge: "💰", badgeLabel: "💰 Budget", description: ["51.7cc petrol earth auger with a 100mm bit."], idealFor: [], features: [] },
+      { slug: "tanaka-aug-ag52-200", brand: "Tanaka", model: "AG52 Earth Auger (200mm bit)", price: "R3,105", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["51.7cc petrol earth auger with a 200mm bit."], idealFor: [], features: [] },
+      { slug: "tanaka-aug-300", brand: "Tanaka", model: "Earth Auger (300mm bit)", price: "R6,095", badge: "🏆", badgeLabel: "🏆 Premium", description: ["Heavy-duty 51.7cc petrol earth auger with a 300mm bit."], idealFor: [], features: [] },
     ],
   },
   spareparts: {
@@ -146,9 +152,9 @@ const catalog = {
     icon: "⚙️",
     tagline: "Replacement engines, blades, cords, oils and consumables to keep equipment running.",
     items: [
-      { slug: "spares-trimmer-head", brand: "Husky", model: "Aluminium Trimmer Head", badge: "💰", badgeLabel: "💰 Budget", description: ["21.5mm aluminium trimmer head, low-cut."], idealFor: [], features: [] },
-      { slug: "husky-eng-143r11a", brand: "Husky", model: "143R11A Replacement Engine", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["41cc, 1.55kW replacement engine for Husky brush cutters."], idealFor: [], features: [] },
-      { slug: "kudu-trailing-seat", brand: "Kudu", model: "Econo Trailing Seat", badge: "🏆", badgeLabel: "🏆 Premium", description: ["Trailing seat accessory for Kudu and Tuffking industrial mowers, lets the operator sit while mowing."], idealFor: [], features: [] },
+      { slug: "spares-trimmer-head", brand: "Husky", model: "Aluminium Trimmer Head", price: "R51", badge: "💰", badgeLabel: "💰 Budget", description: ["21.5mm aluminium trimmer head, low-cut."], idealFor: [], features: [] },
+      { slug: "husky-eng-143r11a", brand: "Husky", model: "143R11A Replacement Engine", price: "R1,219", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["41cc, 1.55kW replacement engine for Husky brush cutters."], idealFor: [], features: [] },
+      { slug: "kudu-trailing-seat", brand: "Kudu", model: "Econo Trailing Seat", price: "R7,590", badge: "🏆", badgeLabel: "🏆 Premium", description: ["Trailing seat accessory for Kudu and Tuffking industrial mowers, lets the operator sit while mowing."], idealFor: [], features: [] },
     ],
   },
 };
@@ -207,7 +213,7 @@ if (rowsEl) {
         <tr class="price-row" data-href="product.html?cat=${categoryKey}&item=${item.slug}">
           <td>${item.brand}</td>
           <td>${item.badge ? item.badge + " " : ""}${item.model}</td>
-          <td class="price-col">Get Quote →</td>
+          <td class="price-col">${item.price}</td>
         </tr>`
       )
       .join("");
@@ -245,7 +251,8 @@ if (rowsEl) {
   applyHero(category, displayName, category.tagline);
 
   productNameEl.textContent = displayName;
-  const quoteMessage = encodeURIComponent(`Hi, I'd like a quote for the ${item.brand} ${item.model}.`);
+  document.getElementById("product-price").textContent = item.price;
+  const quoteMessage = encodeURIComponent(`Hi, I'm interested in the ${item.brand} ${item.model} (${item.price}). Is it in stock?`);
   document.getElementById("product-quote-link").href = `https://wa.me/27645289171?text=${quoteMessage}`;
 
   const badgeLabelEl = document.getElementById("product-badge-label");
