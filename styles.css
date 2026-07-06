@@ -470,6 +470,8 @@ a { color: inherit; text-decoration: none; }
 .product-detail-desc { margin-top: 12px; }
 .product-detail-desc:last-of-type { margin-bottom: 0; }
 
+.product-detail-lists[hidden] { display: none; }
+
 .product-detail-lists {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

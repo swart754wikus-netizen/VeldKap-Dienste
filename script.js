@@ -95,7 +95,56 @@ const catalog = {
     title: "Hedge Trimmers",
     icon: "🌳",
     tagline: "Petrol and electric hedge trimmers for a sharp, even finish.",
-    items: [],
+    items: [
+      {
+        slug: "stiletto-hedge-trimmer",
+        brand: "Stiletto",
+        model: "Hedge Trimmer",
+        badge: "⭐",
+        badgeLabel: "⭐ Best Value",
+        description: [
+          "A lightweight and dependable hedge trimmer that offers outstanding value for money. Perfect for homeowners, estates and landscapers who need clean, precise hedge trimming with reliable performance.",
+        ],
+        idealFor: [],
+        features: [],
+      },
+      {
+        slug: "husky-ht600t",
+        brand: "Husky",
+        model: "HT600T",
+        badge: "🔥",
+        badgeLabel: "🔥 Most Popular",
+        description: [
+          "Our most popular hedge trimmer, combining power, durability and easy handling. Ideal for regular garden maintenance, farms and professional landscaping where reliable performance matters.",
+        ],
+        idealFor: [],
+        features: [],
+      },
+      {
+        slug: "husky-glt600",
+        brand: "Husky",
+        model: "GLT600",
+        badge: "👑",
+        badgeLabel: "👑 Premium",
+        description: [
+          "Built for demanding users who require extra cutting performance and comfort. Its well-balanced design makes trimming larger hedges faster, easier and more efficient.",
+        ],
+        idealFor: [],
+        features: [],
+      },
+      {
+        slug: "husky-hedge-trimmer-25cc",
+        brand: "Husky",
+        model: "Hedge Trimmer (25cc)",
+        badge: "🏆",
+        badgeLabel: "🏆 Top of the Range",
+        description: [
+          "Designed for professionals who expect maximum power, precision and durability. Built to handle long working hours and tough trimming applications while delivering a clean, professional finish every time.",
+        ],
+        idealFor: [],
+        features: [],
+      },
+    ],
   },
   mowers: {
     title: "Lawn Mowers",
@@ -220,10 +269,23 @@ if (rowsEl) {
   document.getElementById("product-description").innerHTML = item.description
     .map((p) => `<p class="product-detail-desc">${p}</p>`)
     .join("");
-  document.getElementById("product-ideal-for").innerHTML = item.idealFor
-    .map((i) => `<li>${i}</li>`)
-    .join("");
-  document.getElementById("product-features").innerHTML = item.features
-    .map((f) => `<li>${f}</li>`)
-    .join("");
+
+  const idealForWrap = document.getElementById("product-ideal-for-wrap");
+  const featuresWrap = document.getElementById("product-features-wrap");
+
+  if (item.idealFor.length) {
+    document.getElementById("product-ideal-for").innerHTML = item.idealFor.map((i) => `<li>${i}</li>`).join("");
+  } else {
+    idealForWrap.hidden = true;
+  }
+
+  if (item.features.length) {
+    document.getElementById("product-features").innerHTML = item.features.map((f) => `<li>${f}</li>`).join("");
+  } else {
+    featuresWrap.hidden = true;
+  }
+
+  if (!item.idealFor.length && !item.features.length) {
+    document.getElementById("product-lists").hidden = true;
+  }
 }
