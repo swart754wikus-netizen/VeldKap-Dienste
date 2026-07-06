@@ -172,9 +172,14 @@ a { color: inherit; text-decoration: none; }
   border-radius: var(--radius);
   padding: 32px 28px;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
 }
 
-.product-card:hover {
+.product-card:hover, .product-card:focus-visible {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
 }
@@ -187,9 +192,7 @@ a { color: inherit; text-decoration: none; }
 
 .product-card p { margin-bottom: 0; }
 
-/* Pricing */
-.pricing { padding: 88px 0; background: var(--earth-100); }
-
+/* Price table (used inside the category modal) */
 .price-table-wrap {
   overflow-x: auto;
   background: #fff;
@@ -253,6 +256,82 @@ a { color: inherit; text-decoration: none; }
 
 .why-card h3 { color: #fff; }
 .why-card p { color: rgba(255, 255, 255, 0.75); margin-bottom: 0; }
+
+/* Catalog modal */
+.catalog-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.catalog-modal[hidden] { display: none; }
+
+.catalog-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 30, 13, 0.55);
+}
+
+.catalog-dialog {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px;
+  max-width: 640px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.catalog-header h3 { margin: 0; }
+
+.catalog-close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  cursor: pointer;
+  line-height: 1;
+  padding: 6px;
+}
+
+.catalog-close:hover { color: var(--green-700); }
+
+.catalog-search {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--earth-200);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.catalog-search:focus {
+  outline: none;
+  border-color: var(--green-600);
+}
+
+.catalog-empty {
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 24px 0 4px;
+}
+
+.catalog-empty a { color: var(--green-700); font-weight: 600; }
 
 /* Contact */
 .contact { padding: 88px 0; }

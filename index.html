@@ -18,7 +18,6 @@
     </a>
     <nav class="nav">
       <a href="#products">Products</a>
-      <a href="#pricing">Pricing</a>
       <a href="#why-us">Why Us</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -44,44 +43,48 @@
       <h2>What We Offer</h2>
       <p class="section-sub">A full range of equipment to keep your garden and property in top shape.</p>
       <div class="product-grid">
-        <div class="product-card">
+        <button type="button" class="product-card" data-category="mowers">
           <span class="product-icon">🚜</span>
           <h3>Lawn Mowers</h3>
           <p>Push, self-propelled and ride-on mowers for gardens of every size.</p>
-        </div>
-        <div class="product-card">
+        </button>
+        <button type="button" class="product-card" data-category="brushcutters">
           <span class="product-icon">✂️</span>
           <h3>Brush Cutters &amp; Trimmers</h3>
           <p>Petrol and electric trimmers for clean edges and tough overgrowth.</p>
-        </div>
-        <div class="product-card">
+        </button>
+        <button type="button" class="product-card" data-category="chainsaws">
           <span class="product-icon">🪚</span>
           <h3>Chainsaws</h3>
           <p>Reliable chainsaws for pruning, felling and firewood prep.</p>
-        </div>
-        <div class="product-card">
+        </button>
+        <button type="button" class="product-card" data-category="gardentools">
           <span class="product-icon">🧰</span>
           <h3>Garden Tools</h3>
           <p>Rakes, spades, wheelbarrows and everyday hand tools.</p>
-        </div>
-        <div class="product-card">
+        </button>
+        <button type="button" class="product-card" data-category="spareparts">
           <span class="product-icon">⚙️</span>
           <h3>Spare Parts &amp; Accessories</h3>
           <p>Blades, cords, filters and consumables to keep equipment running.</p>
-        </div>
-        <div class="product-card">
+        </button>
+        <button type="button" class="product-card" data-category="repairs">
           <span class="product-icon">🛠️</span>
           <h3>Repairs &amp; Servicing</h3>
           <p>Not sure what's wrong with your machine? Bring it in — we'll take a look.</p>
-        </div>
+        </button>
       </div>
     </div>
   </section>
 
-  <section id="pricing" class="pricing">
-    <div class="container">
-      <h2>Brush Cutter Pricing</h2>
-      <p class="section-sub">Popular 41–41.5cc brush cutters currently in stock. Prices subject to availability — call to confirm.</p>
+  <div id="catalog-modal" class="catalog-modal" hidden>
+    <div class="catalog-backdrop" data-close></div>
+    <div class="catalog-dialog" role="dialog" aria-modal="true" aria-labelledby="catalog-title">
+      <div class="catalog-header">
+        <h3 id="catalog-title">Category</h3>
+        <button type="button" class="catalog-close" data-close aria-label="Close">✕</button>
+      </div>
+      <input type="text" id="catalog-search" class="catalog-search" placeholder="Search brand or model, e.g. Turfmaster">
       <div class="price-table-wrap">
         <table class="price-table">
           <thead>
@@ -91,47 +94,12 @@
               <th class="price-col">Retail Price</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Bush Hog</td>
-              <td>143R 41.5cc</td>
-              <td class="price-col">R1,599</td>
-            </tr>
-            <tr>
-              <td>Stiletto</td>
-              <td>PRO143R 41cc</td>
-              <td class="price-col">R1,999</td>
-            </tr>
-            <tr>
-              <td>Stiletto</td>
-              <td>143R HD Turbo 41.5cc</td>
-              <td class="price-col">R1,999</td>
-            </tr>
-            <tr>
-              <td>Tanaka</td>
-              <td>143R HD 41cc</td>
-              <td class="price-col">R2,199</td>
-            </tr>
-            <tr>
-              <td>Tanaka</td>
-              <td>143R HD Turbo 41.5cc</td>
-              <td class="price-col">R2,199</td>
-            </tr>
-            <tr>
-              <td>Husky</td>
-              <td>143R HD Turbo 41.5cc</td>
-              <td class="price-col">R2,199</td>
-            </tr>
-            <tr>
-              <td>Husky</td>
-              <td>143R HD Elite 41cc</td>
-              <td class="price-col">R2,349</td>
-            </tr>
-          </tbody>
+          <tbody id="catalog-rows"></tbody>
         </table>
       </div>
+      <p id="catalog-empty" class="catalog-empty" hidden>No matching items. <a href="tel:+27645289171">Call 064 528 9171</a> — we may still have it in stock.</p>
     </div>
-  </section>
+  </div>
 
   <section id="why-us" class="why-us">
     <div class="container">
