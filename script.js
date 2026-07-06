@@ -1,4 +1,5 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const catalog = {
   brushcutters: {
@@ -43,65 +44,50 @@ const catalog = {
   },
 };
 
-const modal = document.getElementById("catalog-modal");
-const titleEl = document.getElementById("catalog-title");
-const searchEl = document.getElementById("catalog-search");
 const rowsEl = document.getElementById("catalog-rows");
-const emptyEl = document.getElementById("catalog-empty");
 
-let activeItems = [];
-let lastFocused = null;
+if (rowsEl) {
+  const titleEl = document.getElementById("catalog-title");
+  const pageTitleEl = document.getElementById("page-title");
+  const searchEl = document.getElementById("catalog-search");
+  const emptyEl = document.getElementById("catalog-empty");
+  const sidebarLinks = document.querySelectorAll(".sidebar-link");
 
-function renderRows(items) {
-  rowsEl.innerHTML = items
-    .map(
-      (item) =>
-        `<tr><td>${item.brand}</td><td>${item.model}</td><td class="price-col">${item.price}</td></tr>`
-    )
-    .join("");
-  emptyEl.hidden = items.length > 0;
-  rowsEl.closest(".price-table-wrap").hidden = items.length === 0;
-}
-
-function openCatalog(categoryKey) {
+  const params = new URLSearchParams(window.location.search);
+  const requestedCategory = params.get("cat");
+  const categoryKey = catalog[requestedCategory] ? requestedCategory : "brushcutters";
   const category = catalog[categoryKey];
-  if (!category) return;
-  activeItems = category.items;
+  let activeItems = category.items;
+
   titleEl.textContent = category.title;
-  searchEl.value = "";
-  renderRows(activeItems);
-  lastFocused = document.activeElement;
-  modal.hidden = false;
-  document.body.style.overflow = "hidden";
-  searchEl.focus();
-}
+  if (pageTitleEl) pageTitleEl.textContent = `${category.title} | Veldkap Dienste`;
 
-function closeCatalog() {
-  modal.hidden = true;
-  document.body.style.overflow = "";
-  if (lastFocused) lastFocused.focus();
-}
+  sidebarLinks.forEach((link) => {
+    link.classList.toggle("is-active", link.dataset.cat === categoryKey);
+  });
 
-document.querySelectorAll(".product-card[data-category]").forEach((card) => {
-  card.addEventListener("click", () => openCatalog(card.dataset.category));
-});
-
-modal.querySelectorAll("[data-close]").forEach((el) => {
-  el.addEventListener("click", closeCatalog);
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !modal.hidden) closeCatalog();
-});
-
-searchEl.addEventListener("input", () => {
-  const q = searchEl.value.trim().toLowerCase();
-  const filtered = q
-    ? activeItems.filter(
+  function renderRows(items) {
+    rowsEl.innerHTML = items
+      .map(
         (item) =>
-          item.brand.toLowerCase().includes(q) ||
-          item.model.toLowerCase().includes(q)
+          `<tr><td>${item.brand}</td><td>${item.model}</td><td class="price-col">${item.price}</td></tr>`
       )
-    : activeItems;
-  renderRows(filtered);
-});
+      .join("");
+    emptyEl.hidden = items.length > 0;
+    rowsEl.closest(".price-table-wrap").hidden = items.length === 0;
+  }
+
+  renderRows(activeItems);
+
+  searchEl.addEventListener("input", () => {
+    const q = searchEl.value.trim().toLowerCase();
+    const filtered = q
+      ? activeItems.filter(
+          (item) =>
+            item.brand.toLowerCase().includes(q) ||
+            item.model.toLowerCase().includes(q)
+        )
+      : activeItems;
+    renderRows(filtered);
+  });
+}

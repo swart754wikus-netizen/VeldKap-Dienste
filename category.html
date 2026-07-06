@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Category | Veldkap Dienste</title>
+<meta name="description" content="Browse Veldkap Dienste's lawn equipment categories, current stock and pricing.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">🌿</span>
+      <span class="logo-text">Veldkap <strong>Dienste</strong></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#products">Products</a>
+      <a href="index.html#why-us">Why Us</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="tel:+27645289171" class="btn btn-primary header-call">Call 064 528 9171</a>
+  </div>
+</header>
+
+<main>
+  <section class="section catalog-page">
+    <div class="container">
+      <div class="catalog-layout">
+
+        <nav class="catalog-sidebar" aria-label="Product categories">
+          <span class="catalog-sidebar-label">Categories</span>
+          <a class="sidebar-link" data-cat="brushcutters" href="category.html?cat=brushcutters">✂️ Brush Cutters</a>
+          <a class="sidebar-link" data-cat="trimmers" href="category.html?cat=trimmers">🌾 Trimmers</a>
+          <a class="sidebar-link" data-cat="chainsaws" href="category.html?cat=chainsaws">🪚 Chainsaws</a>
+          <a class="sidebar-link" data-cat="blowers" href="category.html?cat=blowers">🍃 Blowers</a>
+          <a class="sidebar-link" data-cat="hedgetrimmers" href="category.html?cat=hedgetrimmers">🌳 Hedge Trimmers</a>
+          <a class="sidebar-link" data-cat="mowers" href="category.html?cat=mowers">🚜 Lawn Mowers</a>
+          <a class="sidebar-link" data-cat="earthaugers" href="category.html?cat=earthaugers">🕳️ Earth Augers</a>
+          <a class="sidebar-link" data-cat="spareparts" href="category.html?cat=spareparts">⚙️ Spare Parts &amp; Accessories</a>
+        </nav>
+
+        <div class="catalog-panel">
+          <div class="catalog-header">
+            <h1 id="catalog-title">Category</h1>
+          </div>
+          <input type="text" id="catalog-search" class="catalog-search" placeholder="Search brand or model, e.g. Husky">
+          <div class="price-table-wrap">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Brand</th>
+                  <th>Model</th>
+                  <th class="price-col">Retail Price</th>
+                </tr>
+              </thead>
+              <tbody id="catalog-rows"></tbody>
+            </table>
+          </div>
+          <p id="catalog-empty" class="catalog-empty" hidden>No matching items. <a href="tel:+27645289171">Call 064 528 9171</a> — we may still have it in stock.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Veldkap Dienste. All rights reserved.</p>
+    <p><a href="tel:+27645289171">064 528 9171</a></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

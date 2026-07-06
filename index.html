@@ -6,6 +6,9 @@
 <title>Veldkap Dienste | Quality Lawn Equipment</title>
 <meta name="description" content="Veldkap Dienste supplies quality lawn mowers, trimmers, chainsaws, and garden equipment. Call 064 528 9171 for expert advice and great prices.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,69 +24,73 @@
       <a href="#why-us">Why Us</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="tel:+27645289171" class="btn btn-call header-call">📞 064 528 9171</a>
+    <a href="tel:+27645289171" class="btn btn-primary header-call">Call 064 528 9171</a>
   </div>
 </header>
 
 <main id="top">
 
   <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="container hero-inner">
-      <h1>Quality Lawn Equipment You Can Trust</h1>
-      <p class="hero-sub">Mowers, trimmers, chainsaws and garden tools — sold with honest advice and prices that make sense.</p>
+      <span class="badge">🌿 Your local lawn equipment specialist</span>
+      <h1>Quality lawn equipment,<br><span class="text-accent">honest advice.</span></h1>
+      <p class="hero-sub">Mowers, trimmers, chainsaws and garden tools — sold with prices that make sense and support that doesn't end at checkout.</p>
       <div class="hero-actions">
-        <a href="tel:+27645289171" class="btn btn-primary">📞 Call 064 528 9171</a>
-        <a href="https://wa.me/27645289171" class="btn btn-secondary" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+        <a href="tel:+27645289171" class="btn btn-primary">Call 064 528 9171</a>
+        <a href="https://wa.me/27645289171" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp Us</a>
       </div>
     </div>
   </section>
 
-  <section id="products" class="products">
+  <section id="products" class="section">
     <div class="container">
       <h2>What We Offer</h2>
-      <p class="section-sub">A full range of equipment to keep your garden and property in top shape.</p>
-      <div class="product-grid">
-        <button type="button" class="product-card" data-category="brushcutters">
+      <p class="section-sub">A full range of equipment to keep your garden and property in top shape. Tap a category to see current stock and pricing.</p>
+
+      <div class="product-grid" id="product-grid">
+        <a class="product-card" href="category.html?cat=brushcutters">
           <span class="product-icon">✂️</span>
           <h3>Brush Cutters</h3>
           <p>Petrol brush cutters for clearing overgrowth and tough vegetation.</p>
-        </button>
-        <button type="button" class="product-card" data-category="trimmers">
+        </a>
+        <a class="product-card" href="category.html?cat=trimmers">
           <span class="product-icon">🌾</span>
           <h3>Trimmers</h3>
           <p>Line trimmers for clean, precise edges around beds and paths.</p>
-        </button>
-        <button type="button" class="product-card" data-category="chainsaws">
+        </a>
+        <a class="product-card" href="category.html?cat=chainsaws">
           <span class="product-icon">🪚</span>
           <h3>Chainsaws</h3>
           <p>Reliable chainsaws for pruning, felling and firewood prep.</p>
-        </button>
-        <button type="button" class="product-card" data-category="blowers">
+        </a>
+        <a class="product-card" href="category.html?cat=blowers">
           <span class="product-icon">🍃</span>
           <h3>Blowers</h3>
           <p>Handheld and backpack blowers for clearing leaves and debris.</p>
-        </button>
-        <button type="button" class="product-card" data-category="hedgetrimmers">
+        </a>
+        <a class="product-card" href="category.html?cat=hedgetrimmers">
           <span class="product-icon">🌳</span>
           <h3>Hedge Trimmers</h3>
           <p>Petrol and electric hedge trimmers for a sharp, even finish.</p>
-        </button>
-        <button type="button" class="product-card" data-category="mowers">
+        </a>
+        <a class="product-card" href="category.html?cat=mowers">
           <span class="product-icon">🚜</span>
           <h3>Lawn Mowers</h3>
           <p>Push, self-propelled and ride-on mowers for gardens of every size.</p>
-        </button>
-        <button type="button" class="product-card" data-category="earthaugers">
+        </a>
+        <a class="product-card" href="category.html?cat=earthaugers">
           <span class="product-icon">🕳️</span>
           <h3>Earth Augers</h3>
           <p>Petrol earth augers for fast, effortless hole digging.</p>
-        </button>
-        <button type="button" class="product-card" data-category="spareparts">
+        </a>
+        <a class="product-card" href="category.html?cat=spareparts">
           <span class="product-icon">⚙️</span>
           <h3>Spare Parts &amp; Accessories</h3>
           <p>Blades, cords, filters and consumables to keep equipment running.</p>
-        </button>
+        </a>
       </div>
+
       <div class="service-note">
         <span class="service-note-icon">🛠️</span>
         <p>Not sure what's wrong with your machine? We also do <strong>repairs &amp; servicing</strong> — bring it in, we'll take a look.</p>
@@ -91,50 +98,26 @@
     </div>
   </section>
 
-  <div id="catalog-modal" class="catalog-modal" hidden>
-    <div class="catalog-backdrop" data-close></div>
-    <div class="catalog-dialog" role="dialog" aria-modal="true" aria-labelledby="catalog-title">
-      <div class="catalog-header">
-        <h3 id="catalog-title">Category</h3>
-        <button type="button" class="catalog-close" data-close aria-label="Close">✕</button>
-      </div>
-      <input type="text" id="catalog-search" class="catalog-search" placeholder="Search brand or model, e.g. Husky">
-      <div class="price-table-wrap">
-        <table class="price-table">
-          <thead>
-            <tr>
-              <th>Brand</th>
-              <th>Model</th>
-              <th class="price-col">Retail Price</th>
-            </tr>
-          </thead>
-          <tbody id="catalog-rows"></tbody>
-        </table>
-      </div>
-      <p id="catalog-empty" class="catalog-empty" hidden>No matching items. <a href="tel:+27645289171">Call 064 528 9171</a> — we may still have it in stock.</p>
-    </div>
-  </div>
-
-  <section id="why-us" class="why-us">
+  <section id="why-us" class="section">
     <div class="container">
       <h2>Why Choose Veldkap Dienste</h2>
       <div class="why-grid">
-        <div class="why-card">
+        <div class="glass-card">
           <span class="why-icon">✔️</span>
           <h3>Quality Equipment</h3>
           <p>We only stock brands and machines we'd trust on our own property.</p>
         </div>
-        <div class="why-card">
+        <div class="glass-card">
           <span class="why-icon">🗣️</span>
           <h3>Honest Advice</h3>
           <p>Tell us what you need it for — we'll help you pick the right tool, not the priciest one.</p>
         </div>
-        <div class="why-card">
+        <div class="glass-card">
           <span class="why-icon">💰</span>
           <h3>Fair Prices</h3>
           <p>Competitive pricing without cutting corners on quality or service.</p>
         </div>
-        <div class="why-card">
+        <div class="glass-card">
           <span class="why-icon">🤝</span>
           <h3>After-Sales Support</h3>
           <p>We're here after the sale too — parts, servicing and advice when you need it.</p>
@@ -143,17 +126,17 @@
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="section">
     <div class="container contact-inner">
       <h2>Get In Touch</h2>
       <p class="section-sub">Have a question or want to check stock? Reach out — we're happy to help.</p>
       <div class="contact-cards">
-        <a href="tel:+27645289171" class="contact-card">
+        <a href="tel:+27645289171" class="glass-card contact-card">
           <span class="contact-icon">📞</span>
           <span class="contact-label">Call</span>
           <span class="contact-value">064 528 9171</span>
         </a>
-        <a href="https://wa.me/27645289171" class="contact-card" target="_blank" rel="noopener">
+        <a href="https://wa.me/27645289171" class="glass-card contact-card" target="_blank" rel="noopener">
           <span class="contact-icon">💬</span>
           <span class="contact-label">WhatsApp</span>
           <span class="contact-value">064 528 9171</span>
