@@ -135,17 +135,20 @@ a { color: inherit; text-decoration: none; }
 /* Hero */
 .hero {
   background:
-    radial-gradient(1200px 500px at 80% -10%, rgba(75, 150, 64, 0.15), transparent),
-    var(--earth-100);
-  padding: 96px 0 80px;
+    linear-gradient(180deg, rgba(15, 30, 13, 0.55), rgba(15, 30, 13, 0.75)),
+    url("images/hero-mower.jpg") center 65% / cover no-repeat;
+  padding: 120px 0 100px;
   text-align: center;
 }
 
 .hero-inner { max-width: 720px; margin: 0 auto; }
 
+.hero h1 { color: #fff; }
+
 .hero-sub {
   font-size: 1.15rem;
   margin-bottom: 2em;
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .hero-actions {
