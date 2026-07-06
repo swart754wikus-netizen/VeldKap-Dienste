@@ -12,6 +12,8 @@ const catalog = {
         slug: "bush-hog-143r",
         brand: "Bush Hog",
         model: "143R",
+        badge: "💰",
+        badgeLabel: "💰 Budget",
         description: [
           "The Bush Hog 143R is a dependable entry-level brushcutter designed for homeowners, smallholdings and light farming applications. It offers excellent value for money while delivering the power needed to cut grass, weeds and light brush. Built with durability in mind, it's an ideal choice for occasional to regular use without stretching your budget.",
         ],
@@ -19,22 +21,11 @@ const catalog = {
         features: ["41.5cc petrol engine", "Easy starting", "Heavy-duty gearbox", "Comfortable handlebar design", "Excellent value"],
       },
       {
-        slug: "stiletto-pro143r",
-        brand: "Stiletto",
-        model: "PRO143R",
-        badge: "⭐",
-        description: [
-          "The Stiletto PRO143R is a powerful, heavy-duty brushcutter built for users who need reliable performance every day. Offering more durability and power than entry-level models, it's perfect for farms, landscapers and contractors looking for outstanding value.",
-        ],
-        idealFor: ["Farms", "Landscapers", "Contractors", "Large properties"],
-        features: ["Powerful 41cc engine", "Heavy-duty shaft", "Commercial gearbox", "Comfortable harness", "Built for regular use"],
-      },
-      {
         slug: "tanaka-143r-hd",
         brand: "Tanaka",
         model: "143R HD",
-        badge: "🔥",
-        badgeLabel: "⭐ Our Best Seller",
+        badge: "⚖️",
+        badgeLabel: "⚖️ Mid-Range · Best Seller",
         description: [
           "The Tanaka 143R HD is our most popular brushcutter, trusted by farmers, contractors and professionals for its outstanding reliability and performance. Designed for demanding conditions, it combines excellent cutting power with a durable heavy-duty shaft and gearbox, making it the perfect machine for everyday commercial use.",
           "Whether you're clearing thick grass, weeds or maintaining large properties, the Tanaka 143R HD delivers the performance you can depend on.",
@@ -43,22 +34,11 @@ const catalog = {
         features: ["Commercial-grade 41cc engine", "Heavy-duty square drive shaft", "Professional gearbox", "Comfortable harness", "Built for daily use", "Excellent power-to-weight ratio"],
       },
       {
-        slug: "tanaka-143r-hd-turbo",
-        brand: "Tanaka",
-        model: "143R HD Turbo",
-        badge: "👑",
-        description: [
-          "The Tanaka 143R HD Turbo is engineered for users who require maximum cutting performance in demanding environments. Featuring a high-performance engine and extra heavy-duty construction, it's ideal for clearing thick grass, dense weeds and challenging terrain with ease.",
-          "Designed for professionals who rely on their equipment every day.",
-        ],
-        idealFor: ["Commercial contractors", "Farmers", "Heavy vegetation", "Daily professional use"],
-        features: ["High-performance engine", "Heavy-duty drive shaft", "Professional gearbox", "Superior cutting power", "Built for tough conditions"],
-      },
-      {
         slug: "husky-143r-hd-elite",
         brand: "Husky",
         model: "143R HD Elite",
         badge: "🏆",
+        badgeLabel: "🏆 Premium",
         description: [
           "The Husky 143R HD Elite is the premium choice in the 143R range. Designed for professionals who demand exceptional durability, comfort and performance, it delivers reliable power throughout long working days.",
           "With premium components and robust construction, it's built to handle the toughest jobs while providing a comfortable operating experience.",
@@ -73,10 +53,9 @@ const catalog = {
     icon: "🌾",
     tagline: "Line trimmers for clean, precise edges around beds and paths.",
     items: [
-      { slug: "stiletto-tm-1000", brand: "Stiletto", model: "TM-1000 Electric Trimmer", description: ["1000W electric trimmer for clean, lightweight edge trimming."], idealFor: [], features: [] },
-      { slug: "husky-pro30a", brand: "Husky", model: "PRO30A Bent Shaft Trimmer", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
-      { slug: "tanaka-pro30a", brand: "Tanaka", model: "PRO30A Bent Shaft Trimmer", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
-      { slug: "dunsch-le20056", brand: "Dunsch", model: "LEA LE20056 Telescopic Trimmer", description: ["550W electric telescopic trimmer with 30cm cutting width, corded."], idealFor: [], features: [] },
+      { slug: "stiletto-tm-1000", brand: "Stiletto", model: "TM-1000 Electric Trimmer", badge: "💰", badgeLabel: "💰 Budget", description: ["1000W electric trimmer for clean, lightweight edge trimming."], idealFor: [], features: [] },
+      { slug: "dunsch-le20056", brand: "Dunsch", model: "LEA LE20056 Telescopic Trimmer", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["550W electric telescopic trimmer with 30cm cutting width, corded."], idealFor: [], features: [] },
+      { slug: "husky-pro30a", brand: "Husky", model: "PRO30A Bent Shaft Trimmer", badge: "🏆", badgeLabel: "🏆 Premium", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
     ],
   },
   chainsaws: {
@@ -84,10 +63,9 @@ const catalog = {
     icon: "🪚",
     tagline: "Reliable chainsaws for pruning, felling and firewood prep.",
     items: [
-      { slug: "husky-cs52", brand: "Husky", model: "CS52 (18\")", description: ["49.3cc, 2.2kW petrol chainsaw with 18\" bar."], idealFor: [], features: [] },
-      { slug: "husky-cs65t", brand: "Husky", model: "CS65T (20\")", description: ["65.1cc, 3.7kW petrol chainsaw with 20\" bar, built for grounds maintenance, felling and forestry work."], idealFor: [], features: [] },
-      { slug: "tanaka-cs72", brand: "Tanaka", model: "CS72 (22\")", description: ["70.7cc, 3.9kW petrol chainsaw with 22\" bar."], idealFor: [], features: [] },
-      { slug: "dunsch-du565", brand: "Dunsch", model: "DU565", description: ["54.6cc, 2.3kW two-stroke petrol chainsaw with 50cm cutting length."], idealFor: [], features: [] },
+      { slug: "dunsch-du565", brand: "Dunsch", model: "DU565", badge: "💰", badgeLabel: "💰 Budget", description: ["54.6cc, 2.3kW two-stroke petrol chainsaw with 50cm cutting length."], idealFor: [], features: [] },
+      { slug: "husky-cs65t", brand: "Husky", model: "CS65T (20\")", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["65.1cc, 3.7kW petrol chainsaw with 20\" bar, built for grounds maintenance, felling and forestry work."], idealFor: [], features: [] },
+      { slug: "tanaka-cs72", brand: "Tanaka", model: "CS72 (22\")", badge: "🏆", badgeLabel: "🏆 Premium", description: ["70.7cc, 3.9kW petrol chainsaw with 22\" bar."], idealFor: [], features: [] },
     ],
   },
   blowers: {
@@ -95,11 +73,9 @@ const catalog = {
     icon: "🍃",
     tagline: "Handheld and backpack blowers for clearing leaves and debris.",
     items: [
-      { slug: "husky-blo300an", brand: "Husky", model: "BLO300AN Handheld Blower", description: ["26cc, 0.95kW petrol handheld blower."], idealFor: [], features: [] },
-      { slug: "husky-blo650a", brand: "Husky", model: "BLO650A Backpack Blower", description: ["63.3cc, 2.6kW petrol backpack blower."], idealFor: [], features: [] },
-      { slug: "husky-bl9000", brand: "Husky", model: "BL9000 Backpack Blower", description: ["79.2cc, 2.7kW heavy-duty petrol backpack blower."], idealFor: [], features: [] },
-      { slug: "tanaka-blo550", brand: "Tanaka", model: "BLO550 Backpack Blower", description: ["51.7cc, 1.75kW petrol backpack blower."], idealFor: [], features: [] },
-      { slug: "husky-26-40-mist", brand: "Husky", model: "26/40 Mist Blower", description: ["42.7cc, 2.13kW petrol mist blower for spraying and pest control."], idealFor: [], features: [] },
+      { slug: "husky-blo300an", brand: "Husky", model: "BLO300AN Handheld Blower", badge: "💰", badgeLabel: "💰 Budget", description: ["26cc, 0.95kW petrol handheld blower."], idealFor: [], features: [] },
+      { slug: "husky-blo950", brand: "Husky", model: "BLO950 Backpack Blower", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["75.6cc, 3.2kW petrol backpack blower."], idealFor: [], features: [] },
+      { slug: "tanaka-blo850", brand: "Tanaka", model: "BLO850 Backpack Blower", badge: "🏆", badgeLabel: "🏆 Premium", description: ["63.3cc, 2.6kW heavy-duty petrol backpack blower."], idealFor: [], features: [] },
     ],
   },
   hedgetrimmers: {
@@ -111,22 +87,10 @@ const catalog = {
         slug: "stiletto-hedge-trimmer",
         brand: "Stiletto",
         model: "Hedge Trimmer",
-        badge: "⭐",
-        badgeLabel: "⭐ Best Value",
+        badge: "💰",
+        badgeLabel: "💰 Budget",
         description: [
           "A lightweight and dependable hedge trimmer that offers outstanding value for money. Perfect for homeowners, estates and landscapers who need clean, precise hedge trimming with reliable performance.",
-        ],
-        idealFor: [],
-        features: [],
-      },
-      {
-        slug: "husky-ht600t",
-        brand: "Husky",
-        model: "HT600T",
-        badge: "🔥",
-        badgeLabel: "🔥 Most Popular",
-        description: [
-          "Our most popular hedge trimmer, combining power, durability and easy handling. Ideal for regular garden maintenance, farms and professional landscaping where reliable performance matters.",
         ],
         idealFor: [],
         features: [],
@@ -135,8 +99,8 @@ const catalog = {
         slug: "husky-glt600",
         brand: "Husky",
         model: "GLT600",
-        badge: "👑",
-        badgeLabel: "👑 Premium",
+        badge: "⚖️",
+        badgeLabel: "⚖️ Mid-Range",
         description: [
           "Built for demanding users who require extra cutting performance and comfort. Its well-balanced design makes trimming larger hedges faster, easier and more efficient.",
         ],
@@ -148,7 +112,7 @@ const catalog = {
         brand: "Husky",
         model: "Hedge Trimmer (25cc)",
         badge: "🏆",
-        badgeLabel: "🏆 Top of the Range",
+        badgeLabel: "🏆 Premium",
         description: [
           "Designed for professionals who expect maximum power, precision and durability. Built to handle long working hours and tough trimming applications while delivering a clean, professional finish every time.",
         ],
@@ -162,12 +126,9 @@ const catalog = {
     icon: "🚜",
     tagline: "Push, self-propelled and ride-on mowers for gardens of every size.",
     items: [
-      { slug: "husky-m-husexv200", brand: "Husky", model: "19\" Petrol Walk-Behind Mower (196cc)", description: ["19\" aluminium walk-behind mower with a 196cc, 4kW 4-stroke petrol engine."], idealFor: [], features: [] },
-      { slug: "husky-tractor-42-15", brand: "Husky", model: "42\" Ride-On Tractor Mower (15HP)", description: ["42\" cutting width ride-on tractor mower with a 15HP petrol engine."], idealFor: [], features: [] },
-      { slug: "husky-ztr14546", brand: "Husky", model: "42\" Zero-Turn Mower", description: ["42\" cutting width zero-turn ride-on mower with a 546cc petrol engine."], idealFor: [], features: [] },
-      { slug: "kudu-t850-ex420", brand: "Kudu", model: "850mm Self-Propelled Industrial Mower (Stiletto EX420)", description: ["850mm self-propelled industrial flail mower with a 420cc, 9kW Stiletto engine, 2-speed gearbox and solid rubber tyres."], idealFor: [], features: [] },
-      { slug: "estatemaster-600-honda", brand: "Estatemaster", model: "600mm Three Wheeler (Honda GXV160)", description: ["Heavy-duty 600mm three-wheeler industrial mower with a 163cc, 3.2kW Honda 4-stroke engine."], idealFor: [], features: [] },
-      { slug: "stiletto-reel-17", brand: "Stiletto", model: "17\" Cylinder Mower", description: ["17\" cylinder/reel mower with a 196cc petrol engine, for a fine, striped lawn finish."], idealFor: [], features: [] },
+      { slug: "husky-m-husexv200", brand: "Husky", model: "19\" Petrol Walk-Behind Mower (196cc)", badge: "💰", badgeLabel: "💰 Budget", description: ["19\" aluminium walk-behind mower with a 196cc, 4kW 4-stroke petrol engine."], idealFor: [], features: [] },
+      { slug: "husky-tractor-42-15", brand: "Husky", model: "42\" Ride-On Tractor Mower (15HP)", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["42\" cutting width ride-on tractor mower with a 15HP petrol engine."], idealFor: [], features: [] },
+      { slug: "husky-mt152ztr", brand: "Husky", model: "60\" Zero-Turn Mower", badge: "🏆", badgeLabel: "🏆 Premium", description: ["60\" cutting width commercial zero-turn mower with a 708cc petrol engine."], idealFor: [], features: [] },
     ],
   },
   earthaugers: {
@@ -175,10 +136,9 @@ const catalog = {
     icon: "🕳️",
     tagline: "Petrol earth augers for fast, effortless hole digging.",
     items: [
-      { slug: "husky-aug-ag52-100", brand: "Husky", model: "AG52 Earth Auger (100mm bit)", description: ["51.7cc petrol earth auger with a 100mm bit."], idealFor: [], features: [] },
-      { slug: "husky-aug-ag52-300", brand: "Husky", model: "AG52 Earth Auger (300mm bit)", description: ["51.7cc petrol earth auger with a 300mm bit."], idealFor: [], features: [] },
-      { slug: "tanaka-aug-ag52-200", brand: "Tanaka", model: "AG52 Earth Auger (200mm bit)", description: ["51.7cc petrol earth auger with a 200mm bit."], idealFor: [], features: [] },
-      { slug: "tanaka-aug-250", brand: "Tanaka", model: "Earth Auger (250mm bit)", description: ["51.7cc petrol earth auger with a 250mm bit."], idealFor: [], features: [] },
+      { slug: "husky-aug-ag52-100", brand: "Husky", model: "AG52 Earth Auger (100mm bit)", badge: "💰", badgeLabel: "💰 Budget", description: ["51.7cc petrol earth auger with a 100mm bit."], idealFor: [], features: [] },
+      { slug: "tanaka-aug-ag52-200", brand: "Tanaka", model: "AG52 Earth Auger (200mm bit)", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["51.7cc petrol earth auger with a 200mm bit."], idealFor: [], features: [] },
+      { slug: "tanaka-aug-300", brand: "Tanaka", model: "Earth Auger (300mm bit)", badge: "🏆", badgeLabel: "🏆 Premium", description: ["Heavy-duty 51.7cc petrol earth auger with a 300mm bit."], idealFor: [], features: [] },
     ],
   },
   spareparts: {
@@ -186,13 +146,9 @@ const catalog = {
     icon: "⚙️",
     tagline: "Replacement engines, blades, cords, oils and consumables to keep equipment running.",
     items: [
-      { slug: "husky-eng-143r11a", brand: "Husky", model: "143R11A Replacement Engine", description: ["41cc, 1.55kW replacement engine for Husky brush cutters."], idealFor: [], features: [] },
-      { slug: "spares-trimmer-head", brand: "Husky", model: "Aluminium Trimmer Head", description: ["21.5mm aluminium trimmer head, low-cut."], idealFor: [], features: [] },
-      { slug: "spares-trimmer-line", brand: "Husky", model: "Nylon Trimmer Line", description: ["Orange nylon trimmer line, available in 2.0mm, 2.4mm, 2.7mm and 3.5mm, sold loose, in 2kg/10kg rolls or pre-cut lengths."], idealFor: [], features: [] },
-      { slug: "spares-2stroke-oil", brand: "Husky", model: "2-Stroke Engine Oil", description: ["2-stroke petrol engine oil, available from 200ml up to 20L."], idealFor: [], features: [] },
-      { slug: "spares-chainsaw-oil", brand: "Husky", model: "Chainsaw Bar & Chain Oil", description: ["Virgin cutterbar oil for chainsaws, available in 1L, 5L and 20L."], idealFor: [], features: [] },
-      { slug: "tanaka-drill-bits", brand: "Tanaka", model: "Earth Auger Drill Bits", description: ["Replacement earth auger drill bits, available in 100mm, 150mm, 200mm, 250mm and 300mm."], idealFor: [], features: [] },
-      { slug: "kudu-trailing-seat", brand: "Kudu", model: "Econo Trailing Seat", description: ["Trailing seat accessory for Kudu and Tuffking industrial mowers, lets the operator sit while mowing."], idealFor: [], features: [] },
+      { slug: "spares-trimmer-head", brand: "Husky", model: "Aluminium Trimmer Head", badge: "💰", badgeLabel: "💰 Budget", description: ["21.5mm aluminium trimmer head, low-cut."], idealFor: [], features: [] },
+      { slug: "husky-eng-143r11a", brand: "Husky", model: "143R11A Replacement Engine", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["41cc, 1.55kW replacement engine for Husky brush cutters."], idealFor: [], features: [] },
+      { slug: "kudu-trailing-seat", brand: "Kudu", model: "Econo Trailing Seat", badge: "🏆", badgeLabel: "🏆 Premium", description: ["Trailing seat accessory for Kudu and Tuffking industrial mowers, lets the operator sit while mowing."], idealFor: [], features: [] },
     ],
   },
 };
