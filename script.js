@@ -6,6 +6,7 @@ const catalog = {
     title: "Brush Cutters",
     icon: "✂️",
     tagline: "Petrol brush cutters for clearing overgrowth and tough vegetation.",
+    productImage: "images/brushcutter.jpg",
     items: [
       { brand: "Bush Hog", model: "143R 41.5cc", price: "R1,599" },
       { brand: "Stiletto", model: "PRO143R 41cc", price: "R1,999" },
@@ -44,7 +45,6 @@ const catalog = {
     title: "Lawn Mowers",
     icon: "🚜",
     tagline: "Push, self-propelled and ride-on mowers for gardens of every size.",
-    photo: "images/hero-mower.jpg",
     items: [],
   },
   earthaugers: {
@@ -68,6 +68,7 @@ if (rowsEl) {
   const titleEl = document.getElementById("catalog-title");
   const taglineEl = document.getElementById("catalog-tagline");
   const iconEl = document.getElementById("category-hero-icon");
+  const photoEl = document.getElementById("category-hero-photo");
   const pageTitleEl = document.getElementById("page-title");
   const searchEl = document.getElementById("catalog-search");
   const emptyEl = document.getElementById("catalog-empty");
@@ -87,6 +88,12 @@ if (rowsEl) {
   if (category.photo) {
     heroEl.classList.add("has-photo");
     heroEl.style.setProperty("--category-photo", `url("${category.photo}")`);
+    iconEl.hidden = true;
+  } else if (category.productImage) {
+    heroEl.classList.add("has-product");
+    photoEl.src = category.productImage;
+    photoEl.alt = category.title;
+    photoEl.hidden = false;
     iconEl.hidden = true;
   }
 
