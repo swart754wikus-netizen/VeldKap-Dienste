@@ -243,9 +243,19 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(135deg, var(--green-900), var(--green-700));
   padding: 64px 0 56px;
   text-align: center;
+  background-size: cover;
+  background-position: center 60%;
+}
+
+.category-hero.has-photo {
+  background-image:
+    linear-gradient(180deg, rgba(15, 30, 13, 0.6), rgba(15, 30, 13, 0.8)),
+    var(--category-photo);
 }
 
 .category-hero-inner { max-width: 560px; margin: 0 auto; }
+
+.category-hero-icon[hidden] { display: none; }
 
 .category-hero-icon {
   display: inline-flex;

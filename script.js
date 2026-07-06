@@ -44,6 +44,7 @@ const catalog = {
     title: "Lawn Mowers",
     icon: "🚜",
     tagline: "Push, self-propelled and ride-on mowers for gardens of every size.",
+    photo: "images/hero-mower.jpg",
     items: [],
   },
   earthaugers: {
@@ -63,6 +64,7 @@ const catalog = {
 const rowsEl = document.getElementById("catalog-rows");
 
 if (rowsEl) {
+  const heroEl = document.getElementById("category-hero");
   const titleEl = document.getElementById("catalog-title");
   const taglineEl = document.getElementById("catalog-tagline");
   const iconEl = document.getElementById("category-hero-icon");
@@ -81,6 +83,12 @@ if (rowsEl) {
   taglineEl.textContent = category.tagline;
   iconEl.textContent = category.icon;
   if (pageTitleEl) pageTitleEl.textContent = `${category.title} | Veldkap Dienste`;
+
+  if (category.photo) {
+    heroEl.classList.add("has-photo");
+    heroEl.style.setProperty("--category-photo", `url("${category.photo}")`);
+    iconEl.hidden = true;
+  }
 
   sidebarLinks.forEach((link) => {
     link.classList.toggle("is-active", link.dataset.cat === categoryKey);
