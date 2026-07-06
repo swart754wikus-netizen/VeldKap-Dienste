@@ -6,7 +6,7 @@ const catalog = {
     title: "Brush Cutters",
     icon: "✂️",
     tagline: "Petrol brush cutters for clearing overgrowth and tough vegetation.",
-    productImage: "images/brushcutter.jpg",
+    photo: "images/hero-brushcutter.jpg",
     items: [
       { brand: "Bush Hog", model: "143R 41.5cc", price: "R1,599" },
       { brand: "Stiletto", model: "PRO143R 41cc", price: "R1,999" },
