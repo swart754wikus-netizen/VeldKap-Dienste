@@ -238,6 +238,30 @@ a { color: inherit; text-decoration: none; }
   .service-note { flex-direction: column; text-align: center; }
 }
 
+/* Category hero banner */
+.category-hero {
+  background: linear-gradient(135deg, var(--green-900), var(--green-700));
+  padding: 64px 0 56px;
+  text-align: center;
+}
+
+.category-hero-inner { max-width: 560px; margin: 0 auto; }
+
+.category-hero-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.category-hero h1 { color: #fff; margin-bottom: 0.4em; }
+.category-hero p { color: rgba(255, 255, 255, 0.82); margin: 0; font-size: 1.05rem; }
+
 /* Category page layout */
 .catalog-page { padding-top: 56px; }
 
@@ -292,9 +316,6 @@ a { color: inherit; text-decoration: none; }
   padding: 32px;
   box-shadow: var(--shadow);
 }
-
-.catalog-header { margin-bottom: 20px; }
-.catalog-header h1 { margin: 0; font-size: 1.6rem; }
 
 .catalog-search {
   width: 100%;
