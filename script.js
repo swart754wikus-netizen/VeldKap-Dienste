@@ -65,6 +65,8 @@ const catalog = {
     title: "Chainsaws",
     icon: "🪚",
     tagline: "Reliable chainsaws for pruning, felling and firewood prep.",
+    photo: "images/hero-chainsaw.jpg",
+    photoPosition: "50% 40%",
     items: [
       { slug: "dunsch-du565", brand: "Dunsch", model: "DU565", price: "R1,449", badge: "💰", badgeLabel: "💰 Budget", description: ["54.6cc, 2.3kW two-stroke petrol chainsaw with 50cm cutting length."], idealFor: [], features: [] },
       { slug: "husky-cs65t", brand: "Husky", model: "CS65T (20\")", price: "R4,370", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["65.1cc, 3.7kW petrol chainsaw with 20\" bar, built for grounds maintenance, felling and forestry work."], idealFor: [], features: [] },
@@ -75,6 +77,8 @@ const catalog = {
     title: "Blowers",
     icon: "🍃",
     tagline: "Handheld and backpack blowers for clearing leaves and debris.",
+    photo: "images/hero-blower.jpg",
+    photoPosition: "50% 45%",
     items: [
       { slug: "husky-blo300an", brand: "Husky", model: "BLO300AN Handheld Blower", price: "R1,527", badge: "💰", badgeLabel: "💰 Budget", description: ["26cc, 0.95kW petrol handheld blower."], idealFor: [], features: [] },
       { slug: "husky-blo950", brand: "Husky", model: "BLO950 Backpack Blower", price: "R3,065", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["75.6cc, 3.2kW petrol backpack blower."], idealFor: [], features: [] },
@@ -85,6 +89,8 @@ const catalog = {
     title: "Hedge Trimmers",
     icon: "🌳",
     tagline: "Petrol and electric hedge trimmers for a sharp, even finish.",
+    photo: "images/hero-hedgetrimmer.jpg",
+    photoPosition: "50% 45%",
     items: [
       {
         slug: "stiletto-hedge-trimmer",
@@ -131,6 +137,8 @@ const catalog = {
     title: "Lawn Mowers",
     icon: "🚜",
     tagline: "Push, self-propelled and ride-on mowers for gardens of every size.",
+    photo: "images/hero-mowers.jpg",
+    photoPosition: "50% 60%",
     items: [
       { slug: "husky-m-husexv200", brand: "Husky", model: "19\" Petrol Walk-Behind Mower (196cc)", price: "R8,357", badge: "💰", badgeLabel: "💰 Budget", description: ["19\" aluminium walk-behind mower with a 196cc, 4kW 4-stroke petrol engine."], idealFor: [], features: [] },
       { slug: "husky-tractor-42-15", brand: "Husky", model: "42\" Ride-On Tractor Mower (15HP)", price: "R60,663", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["42\" cutting width ride-on tractor mower with a 15HP petrol engine."], idealFor: [], features: [] },
@@ -141,6 +149,8 @@ const catalog = {
     title: "Earth Augers",
     icon: "🕳️",
     tagline: "Petrol earth augers for fast, effortless hole digging.",
+    photo: "images/hero-earthauger.jpg",
+    photoPosition: "50% 35%",
     items: [
       { slug: "husky-aug-ag52-100", brand: "Husky", model: "AG52 Earth Auger (100mm bit)", price: "R2,837", badge: "💰", badgeLabel: "💰 Budget", description: ["51.7cc petrol earth auger with a 100mm bit."], idealFor: [], features: [] },
       { slug: "tanaka-aug-ag52-200", brand: "Tanaka", model: "AG52 Earth Auger (200mm bit)", price: "R3,105", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["51.7cc petrol earth auger with a 200mm bit."], idealFor: [], features: [] },
@@ -176,6 +186,7 @@ function applyHero(category, titleText, taglineText) {
   if (category.photo) {
     heroEl.classList.add("has-photo");
     heroEl.style.setProperty("--category-photo", `url("${category.photo}")`);
+    if (category.photoPosition) heroEl.style.backgroundPosition = category.photoPosition;
     iconEl.hidden = true;
   } else if (category.productImage) {
     heroEl.classList.add("has-product");
