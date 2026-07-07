@@ -314,6 +314,11 @@ a { color: inherit; text-decoration: none; }
   align-items: start;
 }
 
+/* Grid items default to min-width:auto and refuse to shrink below their
+   content, which pushed the page wider than small screens. Allow them to
+   shrink so the sidebar and price table scroll internally instead. */
+.catalog-layout > * { min-width: 0; }
+
 .catalog-sidebar {
   display: flex;
   flex-direction: column;
