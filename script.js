@@ -56,9 +56,9 @@ const catalog = {
     icon: "🌾",
     tagline: "Line trimmers for clean, precise edges around beds and paths.",
     items: [
-      { slug: "stiletto-tm-1000", brand: "Stiletto", model: "TM-1000 Electric Trimmer", price: "R713", badge: "💰", badgeLabel: "💰 Budget", description: ["1000W electric trimmer for clean, lightweight edge trimming."], idealFor: [], features: [] },
-      { slug: "dunsch-le20056", brand: "Dunsch", model: "LEA LE20056 Telescopic Trimmer", price: "R742", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["550W electric telescopic trimmer with 30cm cutting width, corded."], idealFor: [], features: [] },
-      { slug: "husky-pro30a", brand: "Husky", model: "PRO30A Bent Shaft Trimmer", price: "R1,518", badge: "🏆", badgeLabel: "🏆 Premium", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
+      { slug: "tanaka-pro30a", brand: "Tanaka", model: "PRO30A Bent Shaft Trimmer", price: "R1,518", badge: "💰", badgeLabel: "💰 Budget", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
+      { slug: "husky-pro30a", brand: "Husky", model: "PRO30A Bent Shaft Trimmer", price: "R1,518", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
+      { slug: "stiletto-pro30a", brand: "Stiletto", model: "PRO30A Bent Shaft Trimmer", price: "R1,572", badge: "🏆", badgeLabel: "🏆 Premium", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
     ],
   },
   chainsaws: {
