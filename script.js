@@ -151,6 +151,8 @@ const catalog = {
     title: "Spare Parts & Accessories",
     icon: "⚙️",
     tagline: "Replacement engines, blades, cords, oils and consumables to keep equipment running.",
+    photo: "images/hero-spareparts.jpg",
+    photoPosition: "50% 55%",
     items: [
       { slug: "spares-trimmer-head", brand: "Husky", model: "Aluminium Trimmer Head", price: "R51", badge: "💰", badgeLabel: "💰 Budget", description: ["21.5mm aluminium trimmer head, low-cut."], idealFor: [], features: [] },
       { slug: "husky-eng-143r11a", brand: "Husky", model: "143R11A Replacement Engine", price: "R1,219", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["41cc, 1.55kW replacement engine for Husky brush cutters."], idealFor: [], features: [] },
