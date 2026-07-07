@@ -51,16 +51,6 @@ const catalog = {
       },
     ],
   },
-  trimmers: {
-    title: "Trimmers",
-    icon: "🌾",
-    tagline: "Line trimmers for clean, precise edges around beds and paths.",
-    items: [
-      { slug: "tanaka-pro30a", brand: "Tanaka", model: "PRO30A Bent Shaft Trimmer", price: "R1,518", badge: "💰", badgeLabel: "💰 Budget", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
-      { slug: "husky-pro30a", brand: "Husky", model: "PRO30A Bent Shaft Trimmer", price: "R1,518", badge: "⚖️", badgeLabel: "⚖️ Mid-Range", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
-      { slug: "stiletto-pro30a", brand: "Stiletto", model: "PRO30A Bent Shaft Trimmer", price: "R1,572", badge: "🏆", badgeLabel: "🏆 Premium", description: ["26cc, 0.9kW petrol bent shaft trimmer."], idealFor: [], features: [] },
-    ],
-  },
   chainsaws: {
     title: "Chainsaws",
     icon: "🪚",
