@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.veldkapdienste.co.za/sitemap.xml

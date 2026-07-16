@@ -214,6 +214,9 @@ if (rowsEl) {
 
   applyHero(category, category.title, category.tagline);
 
+  const canonicalEl = document.getElementById("canonical-link");
+  if (canonicalEl) canonicalEl.href = `https://www.veldkapdienste.co.za/category.html?cat=${categoryKey}`;
+
   sidebarLinks.forEach((link) => {
     link.classList.toggle("is-active", link.dataset.cat === categoryKey);
   });
@@ -261,6 +264,9 @@ if (rowsEl) {
 
   const displayName = `${item.badge ? item.badge + " " : ""}${item.brand} ${item.model}`;
   applyHero(category, displayName, category.tagline);
+
+  const canonicalEl = document.getElementById("canonical-link");
+  if (canonicalEl) canonicalEl.href = `https://www.veldkapdienste.co.za/product.html?cat=${categoryKey}&item=${item.slug}`;
 
   productNameEl.textContent = displayName;
   document.getElementById("product-price").textContent = item.price;
