@@ -500,13 +500,7 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 
-.product-detail-header h3 { margin: 0 0 4px; }
-
-.product-detail-price {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--green-900);
-}
+.product-detail-header h3 { margin: 0; }
 
 .product-quote-btn {
   padding: 10px 22px;

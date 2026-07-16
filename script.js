@@ -228,7 +228,7 @@ if (rowsEl) {
         <tr class="price-row" data-href="product.html?cat=${categoryKey}&item=${item.slug}">
           <td>${item.brand}</td>
           <td>${item.badge ? item.badge + " " : ""}${item.model}</td>
-          <td class="price-col">${item.price}</td>
+          <td class="price-col">Get Quote →</td>
         </tr>`
       )
       .join("");
@@ -269,8 +269,7 @@ if (rowsEl) {
   if (canonicalEl) canonicalEl.href = `https://www.veldkapdienste.co.za/product.html?cat=${categoryKey}&item=${item.slug}`;
 
   productNameEl.textContent = displayName;
-  document.getElementById("product-price").textContent = item.price;
-  const quoteMessage = encodeURIComponent(`Hi, I'm interested in the ${item.brand} ${item.model} (${item.price}). Is it in stock?`);
+  const quoteMessage = encodeURIComponent(`Hi, I'd like a quote for the ${item.brand} ${item.model}.`);
   document.getElementById("product-quote-link").href = `https://wa.me/27645289171?text=${quoteMessage}`;
 
   const badgeLabelEl = document.getElementById("product-badge-label");
